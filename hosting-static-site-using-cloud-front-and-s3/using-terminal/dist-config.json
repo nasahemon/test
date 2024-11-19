@@ -1,0 +1,116 @@
+{
+    "Distribution": {
+        "Status": "InProgress",
+        "DomainName": "d2cn6bws26xdpi.cloudfront.net",
+        "InProgressInvalidationBatches": 0,
+        "DistributionConfig": {
+            "Comment": "",
+            "CacheBehaviors": {
+                "Quantity": 0
+            },
+            "IsIPV6Enabled": true,
+            "Logging": {
+                "Bucket": "",
+                "Prefix": "",
+                "Enabled": false,
+                "IncludeCookies": false
+            },
+            "WebACLId": "",
+            "Origins": {
+                "Items": [
+                    {
+                        "OriginPath": "",
+                        "DomainName": "s3websitebucket-755260906016.s3.amazonaws.com",
+                        "ConnectionAttempts": 3,
+                        "CustomHeaders": {
+                            "Quantity": 0
+                        },
+                        "ConnectionTimeout": 10,
+                        "S3OriginConfig": {
+                            "OriginAccessIdentity": "origin-access-identity/cloudfront/E22CM7K19WW245"
+                        },
+                        "Id": "s3websitebucket-755260906016.s3.amazonaws.com-1732010921-313099"
+                    }
+                ],
+                "Quantity": 1
+            },
+            "DefaultRootObject": "index.html",
+            "PriceClass": "PriceClass_100",
+            "Enabled": true,
+            "DefaultCacheBehavior": {
+                "FieldLevelEncryptionId": "",
+                "TargetOriginId": "s3websitebucket-755260906016.s3.amazonaws.com-1732010921-313099",
+                "LambdaFunctionAssociations": {
+                    "Quantity": 0
+                },
+                "TrustedSigners": {
+                    "Enabled": false,
+                    "Quantity": 0
+                },
+                "ViewerProtocolPolicy": "redirect-to-https",
+                "ForwardedValues": {
+                    "Headers": {
+                        "Quantity": 0
+                    },
+                    "Cookies": {
+                        "Forward": "none"
+                    },
+                    "QueryStringCacheKeys": {
+                        "Quantity": 0
+                    },
+                    "QueryString": false
+                },
+                "MaxTTL": 31536000,
+                "SmoothStreaming": false,
+                "DefaultTTL": 86400,
+                "AllowedMethods": {
+                    "Items": [
+                        "HEAD",
+                        "GET"
+                    ],
+                    "CachedMethods": {
+                        "Items": [
+                            "HEAD",
+                            "GET"
+                        ],
+                        "Quantity": 2
+                    },
+                    "Quantity": 2
+                },
+                "MinTTL": 0,
+                "Compress": false
+            },
+            "CallerReference": "cli-1732010921-118821",
+            "ViewerCertificate": {
+                "CloudFrontDefaultCertificate": true,
+                "SSLSupportMethod": "vip",
+                "MinimumProtocolVersion": "TLSv1",
+                "CertificateSource": "cloudfront"
+            },
+            "CustomErrorResponses": {
+                "Quantity": 0
+            },
+            "OriginGroups": {
+                "Quantity": 0
+            },
+            "HttpVersion": "http2",
+            "Restrictions": {
+                "GeoRestriction": {
+                    "RestrictionType": "none",
+                    "Quantity": 0
+                }
+            },
+            "Aliases": {
+                "Quantity": 0
+            }
+        },
+        "ActiveTrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+        },
+        "LastModifiedTime": "2024-11-19T10:21:13.680Z",
+        "Id": "E1UOOOPI28P7FY",
+        "ARN": "arn:aws:cloudfront::755260906016:distribution/E1UOOOPI28P7FY"
+    },
+    "ETag": "E39F3T387EDH4J"
+}
