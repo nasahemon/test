@@ -21,7 +21,29 @@ In a different tab, navigate to the EC2 dashboard, find the running instance, an
 > **Note:** When copying and pasting code into Vim from the lab guide, first enter `:set paste` (and then `i` to enter insert mode) to avoid adding unnecessary spaces and hashes. To save and quit the file, press `Escape` followed by `:wq`. To exit the file without saving, press `Escape` followed by `:q!`.
 
 > **Note**: If the EC2 instance is not showing the ability to connect via Session Manager, simply restart the instance to restart the SSM Agent.
-
+## Create a S3 bucket
+1. Use a unique name
+2. Unselect block all public access and check the 1st two properties.
+3. Acknowledge and save changes to create a bucket
+4. Go to the properties section of bucket and edit static web hosting properties
+5. Enable static web hosting and add two file name index.html and erro.html as index doc and error doc
+6. Now get to the permission section and edit bucket policy
+7. Add the following policy
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::your-bucket-name/*"
+    }
+  ]
+}
+```
+8. Upload a index.html to the root folder of the bucket. And we are good to go.
 ## Upload Content to S3 Bucket
 1. Verify pre-existing files:
 ```sh
