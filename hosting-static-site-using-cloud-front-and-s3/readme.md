@@ -56,6 +56,10 @@ aws s3 cp index.html s3://<BUCKET_NAME_PROVIDED>
 ```sh
 aws s3 cp index.html s3://s3websitebucket-755260906016
 ```
+take all the file in the html folder but not the folder itself
+```sh
+aws s3 cp ./html s3://your-bucket-name/ --recursive
+```
 ## Create CloudFront OAI
 1. Generate a UUID by running `uuidgen` in the console. Copy and save the UUID in a separate text file; use that for the next step.
 2. Create a CloudFront origin access identity (replacing `<YOUR_UNIQUE_UUIDGEN_HERE>` with the uuidgen):
